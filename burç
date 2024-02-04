@@ -1,0 +1,161 @@
+import java.util.Scanner;
+
+public class Burc {
+    public static void main(String[] args) {
+        int day;
+        String month;
+        boolean isError = false;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Doğduğunuz ayı giriniz:");
+        month = input.nextLine();
+
+        System.out.print("Ayın kaçında doğduğunuzu giriniz:");
+        day = input.nextInt();
+
+        if (month.equals("ocak")) {
+            if (day <= 31) {
+
+                if (day <= 22) {
+                    System.out.print("Oğlak burcu");
+                } else
+                    System.out.print("Kova burcu");
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("şubat")) {
+            if (day <= 28) {
+
+                if (day <= 20) {
+                    System.out.print("Kova burcu");
+                } else
+                    System.out.print("Balık burcu");
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("mart")) {
+            if (day <= 31) {
+
+                if (day <= 20) {
+                    System.out.print("Balık burcu");
+                } else
+                    System.out.print("Koç burcu");
+            } else {
+                isError = true;
+
+            }
+        } else if (month.equals("nisan")) {
+            if (day <= 30) {
+
+                if (day <= 20) {
+                    System.out.print("Koç burcu");
+                } else
+                    System.out.print("Boğa burcu");
+            } else {
+                isError = true;
+
+            }
+        } else if (month.equals("mayıs")) {
+            if (day <= 31) {
+
+                if (day <= 21) {
+                    System.out.print("Boğa burcu");
+                } else {
+                    System.out.print("İkizler burcu");
+                }
+            } else {
+                isError = true;
+
+            }
+        } else if (month.equals("haziran")) {
+            if (day <= 30) {
+
+                if (day <= 22) {
+                    System.out.print("İkizler burcu");
+                } else {
+                    System.out.print("Yengeç burcu");
+                }
+
+            } else {
+                isError = true;
+
+
+            }
+        } else if (month.equals("temmuz")) {
+            if (day <= 31) {
+
+                if (day <= 22) {
+                    System.out.print("Yengeç burcu");
+                } else {
+                    System.out.print("Aslan burcu");
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("ağustos")) {
+            if (day <= 30) {
+
+                if (day <= 22) {
+                    System.out.print("Aslan burcu");
+                } else {
+                    System.out.print("Başak burcu");
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("eylül")) {
+            if (day <= 31) {
+
+                if (day <= 22) {
+                    System.out.print("Başak burcu");
+                } else {
+                    System.out.print("Terazi burcu");
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("ekim")) {
+            if (day <= 30) {
+
+                if (day <= 22) {
+                    System.out.print("Terazi burcu");
+                } else {
+                    System.out.print("Akrep burcu");
+                }
+            } else {
+                isError = true;
+
+            }
+        } else if (month.equals("kasım")) {
+            if (day <= 31) {
+
+                if (day <= 21) {
+                    System.out.print("Akrep burcu");
+                } else {
+                    System.out.print("Yay burcu");
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month.equals("aralık")) {
+            if (day <= 30) {
+
+                if (day <= 21) {
+                    System.out.print("Yay burcu");
+                } else {
+                    System.out.print("Oğlak burcu");
+                }
+            } else {
+                isError = true;
+            }
+        }else{
+            isError=true;
+
+        }
+        if (isError){
+            System.out.println("Hatalı giriş yaptınız");
+
+        }
+    }
+}
